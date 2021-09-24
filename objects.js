@@ -16,9 +16,17 @@
 
 //CODE HERE
 
+const me ={
+  firstName: "Bill",
+  state: "Utah",
+  age: 39
+}
+function greeting( obj ) {
+  const{firstName, state, age}=obj;
+  return 'Hello, my name is ' + firstName + ' and I live in ' + state + '!';
+}
 
-
-
+console.log(greeting(me))
 
 //////////////////PROBLEM 2////////////////////
 /*
@@ -43,5 +51,18 @@
     isNew: true
   }
 */
-
 //CODE HERE
+
+ 
+  function carFactory(make,model,year){
+   this.make = make;
+   this.model =model;
+   this.year =year;
+   this.isNew=false;{
+   }if(year<2021){
+       this.isNew=false
+     }
+   }
+
+var newcar= new carFactory("toyota","camry",2020)
+console.log(newcar)
