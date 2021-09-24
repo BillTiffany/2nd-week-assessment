@@ -58,9 +58,9 @@ console.log(greeting(me))
    this.make = make;
    this.model =model;
    this.year =year;
-   this.isNew=true;{
-   }if(year<2018){
-       this.isNew=false
+   this.isNew=false;{
+   }if(year>2018){
+       this.isNew=!this.isNew
      }
    }
 
