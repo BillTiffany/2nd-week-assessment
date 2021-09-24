@@ -17,7 +17,7 @@ reader.question(`Please Enter a Password you'd like to verify:`, password => {
     }
     else {
         console.log('Your password is too short');
-        reader.question('What password would you like to validate?', password => {
+        reader.question(`Please Enter a Password you'd like to verify, remember it must be more than 10 characters:`, password => {
             String(password);
             if(password.length >= 10){
                 console.log('password has been verified');
