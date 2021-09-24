@@ -6,7 +6,12 @@
 */
 
 //CODE HERE
-
+let sum
+function add(a, b){
+  Number(a, b)
+  return sum=a + b
+}
+console.log(add(10,20))
 
 //////////////////PROBLEM 2////////////////////
 /*
@@ -17,6 +22,14 @@
 */
 
 //CODE HERE
+function greaterThanFive(num){
+  if(num>5){
+  console.log(true)
+}else{
+  console.log(false)
+}
+}
+greaterThanFive(1)
 
 //////////////////PROBLEM 3////////////////////
 /*
@@ -27,7 +40,16 @@
 */
 
 //CODE HERE
-
+function findZWords(str){
+  if(str.charAt(0)=="Z"){
+    console.log("This name begins with an uppercase Z")
+  }else if(str.charAt(0)=="z"){
+    console.log('This name begins with a lowercase z')
+  }else{
+  console.log('this word does not begin with a Z')}
+  
+}
+findZWords("zebra")
 //////////////////PROBLEM 4////////////////////
 /*
   Create a function called 'iLove' that takes in two string parameters, 'name' and 'love'. 
@@ -36,3 +58,11 @@
 */
 
 //CODE HERE
+
+function iLove(){
+let name="Joseph"
+let love="loves"
+console.log(`"${name} ${love} music"`)
+}
+
+iLove()
