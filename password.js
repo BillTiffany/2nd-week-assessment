@@ -1,5 +1,4 @@
 console.log("Welcome to the password Verifier Tool")
-console.log("Please enter a new password")
 console.log("Please create a password that is at least 10 characters long")
 
 const { SSL_OP_NO_QUERY_MTU } = require('constants');
@@ -10,14 +9,21 @@ const reader = readline.createInterface({
   output: process.stdout,
 });
 
-reader.question("What is your New password?", function(input){
-    tokens = input.split(' ');
-    console.log('')
-            console.log('num1')
-
-            if ("" < 10) {
-                console.log("password is too short.");
-            }
-        }
-        reader.close()
+reader.question(`Please Enter a Password you'd like to verify:`, password => {
+    String(password);
+    if(password.length >= 10){
+        console.log("Your password has been verified");
+        reader.close();
     }
+    else {
+        console.log('Your password is too short');
+        reader.question('What password would you like to validate?', password => {
+            String(password);
+            if(password.length >= 10){
+                console.log('password has been verified');
+                reader.close();
+            } else {
+                console.log('too many failed attempts. Please try again in 1000000000000000000 hours.');
+                reader.close();
+    }}
+)}})
