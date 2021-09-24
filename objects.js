@@ -58,11 +58,11 @@ console.log(greeting(me))
    this.make = make;
    this.model =model;
    this.year =year;
-   this.isNew=false;{
-   }if(year<2021){
+   this.isNew=true;{
+   }if(year<2018){
        this.isNew=false
      }
    }
 
-var newcar= new carFactory("toyota","camry",2020)
+var newcar= new carFactory("toyota","prius",2017)
 console.log(newcar)
